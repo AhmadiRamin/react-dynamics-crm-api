@@ -19,7 +19,7 @@ export interface IDynamic365SalesAccountsWebPartProps {
 export default class Dynamic365SalesAccountsWebPart extends BaseClientSideWebPart<
   IDynamic365SalesAccountsWebPartProps
 > {
-  public async onInit(): Promise<void> {    
+  public async onInit(): Promise<void> {
     dynamicsService.aadTokenProviderFactory = this.context.aadTokenProviderFactory;
     dynamicsService.resourceUri = `https://${this.properties.dynamicCRMDomain}.dynamics.com`;
   }

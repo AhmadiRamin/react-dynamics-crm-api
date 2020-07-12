@@ -1,6 +1,5 @@
 import * as React from "react";
 import styles from "./Dynamic365SalesAccounts.module.scss";
-import { IDynamic365SalesAccountsProps } from "./IDynamic365SalesAccountsProps";
 import { dynamicsService } from "../../../services/services";
 import IAccount from "../../../model/IAccount";
 import Search from "antd/lib/input/Search";
@@ -49,8 +48,7 @@ const Dynamic365SalesAccounts = () => {
       <Table
         columns={columns}
         expandable={{expandedRowRender: record=> <Contacts Id={record.accountid}/>}}
-        dataSource={accounts}
-        
+        dataSource={accounts}        
       />
     </div>
   );
